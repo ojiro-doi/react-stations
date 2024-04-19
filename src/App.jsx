@@ -19,6 +19,7 @@ export const App = () => {
         console.log(data);
         setDogUrl(data.message);
       })
+      // eslint-disable-next-line no-unused-vars
       .catch((error) => {
         console.log('失敗しました');
       });
