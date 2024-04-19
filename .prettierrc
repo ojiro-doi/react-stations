@@ -1,7 +1,7 @@
 {
-  "arrowParens": "avoid",
+  "arrowPares": "avoid",
   "endOfLine": "lf",
-  "semi": false,
+  "semi": true,
   "singleQuote": true,
   "trailingComma": "all",
   "tabWidth": 2,
@@ -11,5 +11,7 @@
       "files": ".prettierrc",
       "options": { "parser": "json" }
     }
-  ]
+  ],
+  "--bracket-same-line": true,
+  "printWidth": 120 
 }
