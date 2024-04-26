@@ -12,7 +12,8 @@ export const Description = () => {
         return response.json();
       })
       .then((data) => {
-        console.log(data);
+        console.log(`image:`,data);
+        console.log(`image:${data}`);//表示されない
         setDogUrl(data.message);
       })
       // eslint-disable-next-line no-unused-vars
@@ -21,10 +22,14 @@ export const Description = () => {
       });
   };
 
+  // const breeds=[]
+
   return (
     <div>
       <h3>犬の画像を表示するサイトです</h3>
-      <DogImage imageUrl={dogUrl}/>
+      <p>
+        <DogImage imageUrl={dogUrl}/>
+      </p>
       <button className="btnDogReload" onClick={clickButton}>
         更新
       </button>
