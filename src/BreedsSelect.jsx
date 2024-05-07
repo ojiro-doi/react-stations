@@ -5,7 +5,13 @@ export const BreedsSelect = ({ breeds, selectedBreed, setSelectedBreeds }) => {
 
   return (
     <div>
-      <select value={selectedBreed} onChange={(e) => setSelectedBreeds(e.target.value)}>
+      <select
+        value={selectedBreed}
+        onChange={(e) => {
+          console.log(`e.target.value:`, e.target.value);
+          setSelectedBreeds(e.target.value);
+        }}
+      >
         {Object.keys(breeds).map((breed) => (
           <option key={breed} value={breed}>
             {breed}
